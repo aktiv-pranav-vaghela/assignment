@@ -18,7 +18,6 @@ def add_dashes(func):
 @add_stars
 @add_dashes
 def say_hello():
-    print("Hello!")
-
+    pass
 # Calls the decorated function
 say_hello()
