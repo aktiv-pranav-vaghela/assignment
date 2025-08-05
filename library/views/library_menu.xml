@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- main menu -->
+    <menuitem id = "menu_library_root" name = "Library" sequence = "10"/>
+
+    <!-- library sub-menu -->
+    <menuitem id = "menu_library_menu" name = "Libraries" parent = "menu_library_root"/>
+
+    <!-- sub submenu -->
+    <menuitem id = "menu_libraries" name = "Library" parent="menu_library_menu" action = "action_library_view"/>
+    <menuitem id = "menu_books" name = "Books" parent="menu_library_menu" action = "action_book_view"/>
+
+</odoo>

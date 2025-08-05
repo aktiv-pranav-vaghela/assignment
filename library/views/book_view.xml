@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_book_view" model = "ir.action.act_window">
+        <field name = "name">book.view</field>
+        <field name = "res_model">libr.book</field>
+        <field name = "view_mode">tree,form</field>
+    </record>
+
+    <!--  form view for the book  -->
+    <record id = "view_book_form_view" model="ir.ui.view">
+        <field name = "name">book.form</field>
+        <field name = "model">libr.book</field>
+        <field name = "arch" type = "xml">
+            <form name = "Book">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author"/>
+                        <field name="isbn"/>
+                        <field name="library_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+        <!--  tree view for the book  -->
+    <record id = "view_book_tree_view" model="ir.ui.view">
+        <field name = "name">book.tree</field>
+        <field name = "model">libr.book</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name="name"/>
+                <field name="author"/>
+                <field name="isbn"/>
+                <field name="library_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
