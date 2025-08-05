@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    #This record shall be stored in database and it will be list and then form.
+    <record id="view_book_category" model="ir.actions.act_window">
+        <field name="name">Book category</field>
+        <field name="res_model">book.category</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    #This record shall create a list view.
+    <record id="view_book_category_list" model="ir.ui.view">
+        <field name="name">Book.category.list</field>
+        <field name="model">book.category</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    #This record shall create a form view.
+    <record id="view_book_category_form" model="ir.ui.view">
+        <field name="name">Book.category.form</field>
+        <field name="model">book.category</field>
+        <field name="arch" type="xml">
+            <form string="category Details">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

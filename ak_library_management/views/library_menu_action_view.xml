@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- main menu -->
+    <menuitem id="menu_library_main" name="Library"/>
+    <!-- submenu -->
+    <menuitem id="menu_library_management" name="Library Management" parent="menu_library_main"/>
+
+    <!-- sub submenu -->
+    <menuitem id="menu_library_book" name="Books" parent="menu_library_management"
+        action="view_library_book"/>
+    <menuitem id="menu_library_member" name="Members" parent="menu_library_management"
+        action="view_library_member"/>
+    <menuitem id="menu_library_category" name="Category" parent="menu_library_management"
+        action="view_book_category"/>
+</odoo>
