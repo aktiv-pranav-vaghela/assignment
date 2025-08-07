@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Main-menu -->
+    <menuitem id="menu_library_root" name="New Library" sequence="10"/>
+
+    <!-- sub-menu -->
+    <menuitem id="menu_library_menu" name="Library Management" parent="menu_library_root" sequence="10"/>
+    <!-- sub-submenu -->
+    <menuitem id="menu_libraries" name="Libraries" parent="menu_library_menu" action="action_library_view" sequence="10"/>
+    <menuitem id="menu_books" name="Books" parent="menu_library_menu" action="action_book_view" sequence="20"/>
+    <menuitem id="menu_booktags" name="Book Tags" parent="menu_library_menu" action="action_booktags_view" sequence="30"/>
+    <menuitem id="menu_book_category" name="Book Category" parent="menu_library_menu" action="action_bookcategory_view" sequence="40"/>
+</odoo>

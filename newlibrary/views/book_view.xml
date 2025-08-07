@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- This record shall be stored in the specified model and view using act_window. -->
+    <record id="action_book_view" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">newlibrary.book</field>
+        <field name="view_mode">list,form</field> </record>
+
+        <!-- This shall display book as a form -->
+    <record id="view_book_form" model="ir.ui.view">
+        <field name="name">newlibrary.book.form</field>
+        <field name="model">newlibrary.book</field>
+        <field name="arch" type="xml">
+            <form string="Book">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author"/>
+                        <field name="isbn"/>
+                        <field name="library_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- This shall display Book as a list -->
+    <record id="view_book_list" model="ir.ui.view">
+        <field name="name">newlibrary.book.list</field>
+        <field name="model">newlibrary.book</field>
+        <field name="arch" type="xml">
+            <list string="Books"> <field name="name"/>
+                <field name="author"/>
+                <field name="isbn"/>
+                <field name="library_id"/>
+            </list>
+        </field>
+    </record>
+</odoo>

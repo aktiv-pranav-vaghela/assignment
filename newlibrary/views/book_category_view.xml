@@ -1,0 +1,35 @@
+<odoo>
+    <!-- This record shall be stored in the specified model and view using act_window. -->
+    <record id="action_bookcategory_view" model="ir.actions.act_window">
+        <field name="name">Bookscategory View</field>
+        <field name="res_model">newlibrary.book.category</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    !-- This shall display bookcategory as a form -->
+    <record id="view_bookcategory_form_view" model="ir.ui.view">
+        <field name="name">bookscategory.form</field>
+        <field name="model">newlibrary.book.category</field>
+        <field name="arch" type="xml">
+            <form string="Book Tags">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="tag_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    !-- This shall display bookcategory as a list -->
+    <record id="view_bookcategory_list_view" model="ir.ui.view">
+        <field name="name">bookscategory.list</field>
+        <field name="model">newlibrary.book.category</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="tag_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+</odoo>

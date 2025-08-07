@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_newlibrary_library,newlibrary.library,model_newlibrary_library,,1,1,1,1
+access_newlibrary_book,newlibrary.book,model_newlibrary_book,,1,1,1,1
+access_newlibrary_book_category,newlibrary.book.category,model_newlibrary_book_category,,1,1,1,1
+access_newlibrary_book_tags,newlibrary.book.tags,model_newlibrary_book_tags,,1,1,1,1
